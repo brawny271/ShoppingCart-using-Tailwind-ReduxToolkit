@@ -10,10 +10,10 @@ const cartSlice = createSlice({
       console.log("this is from add to cart");
       if (existingCard) {
         existingCard.quantity += 1;
-        existingCard.total = existingCard.quantity * existingCard.price;
+        existingCard.totalPrice = existingCard.quantity * existingCard.price;
       } else {
         newItem.quantity = 1;
-        newItem.total = newItem.price;
+        newItem.totalPrice = newItem.price;
         state.push(newItem);
       }
     },
